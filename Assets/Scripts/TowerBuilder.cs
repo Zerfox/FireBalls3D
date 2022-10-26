@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerBulder : MonoBehaviour
+public class TowerBuilder : MonoBehaviour
 {
     [SerializeField] private float _towerSize;
     [SerializeField] private Transform _buildPoint;
@@ -10,10 +10,6 @@ public class TowerBulder : MonoBehaviour
 
     private List<Block> _blocks;
 
-    private void Start()
-    {
-        Build();
-    }
     public List<Block> Build()
     {
 
@@ -37,6 +33,6 @@ public class TowerBulder : MonoBehaviour
     
     private Vector3 GetBuildPoint(Transform currentSegment)
     {
-        return new Vector3(_buildPoint.position.x, currentSegment.position.y  + currentSegment.localScale.y + _block.transform.localScale.y/2, _buildPoint.position.z);
+        return new Vector3(_buildPoint.position.x, currentSegment.position.y  + currentSegment.localScale.y + _block.transform.localScale.y, _buildPoint.position.z);
     }
 }

@@ -134,6 +134,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2872958070110531988}
+  - component: {fileID: 8426833909996367157}
+  - component: {fileID: 659079230336862270}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -160,6 +162,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8426833909996367157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872958070110531993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c629c517fd13a42a770db8f9c4d9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerSize: 10
+  _buildPoint: {fileID: 2530129886258769473}
+  _block: {fileID: -1491992055178001419, guid: f5afbee225be3704e94efe441f7fe187, type: 3}
+--- !u!114 &659079230336862270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872958070110531993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eccacd9a639efa6439d6e524f8e36883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3398963952584712491
 GameObject:
   m_ObjectHideFlags: 0
