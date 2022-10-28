@@ -33,6 +33,6 @@ public class TowerBuilder : MonoBehaviour
     
     private Vector3 GetBuildPoint(Transform currentSegment)
     {
-        return new Vector3(_buildPoint.position.x, currentSegment.position.y  + currentSegment.localScale.y + _block.transform.localScale.y, _buildPoint.position.z);
+        return new Vector3(_buildPoint.position.x, currentSegment.position.y  + currentSegment.localScale.y + _block.transform.localScale.y*1.1f, _buildPoint.position.z);
     }
 }

@@ -32,7 +32,7 @@ public class Tower : MonoBehaviour
 
         foreach (var block in _blocks)
         {
-            block.transform.position = new Vector3(block.transform.position.x, block.transform.position.y - block.transform.localScale.y*2, block.transform.position.z);
+            block.transform.position = new Vector3(block.transform.position.x, block.transform.position.y - block.transform.localScale.y*2f, block.transform.position.z);
         }
 
         SizeUpdated?.Invoke(_blocks.Count);
