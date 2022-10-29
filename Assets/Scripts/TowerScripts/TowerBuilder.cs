@@ -7,6 +7,7 @@ public class TowerBuilder : MonoBehaviour
     [SerializeField] private float _towerSize;
     [SerializeField] private Transform _buildPoint;
     [SerializeField] private Block _block;
+    [SerializeField] private Color[] _colors;
 
     private List<Block> _blocks;
 
@@ -20,6 +21,7 @@ public class TowerBuilder : MonoBehaviour
         for (int i = 0; i < _towerSize; i++)
         {
             Block newBlock = BuildBlock(currentPoint);
+            newBlock.SetColor(_colors[Random.Range(0, _colors.Length)]);
             _blocks.Add(newBlock);
             currentPoint = newBlock.transform;
         }
@@ -33,6 +35,6 @@ public class TowerBuilder : MonoBehaviour
     
     private Vector3 GetBuildPoint(Transform currentSegment)
     {
-        return new Vector3(_buildPoint.position.x, currentSegment.position.y  + currentSegment.localScale.y + _block.transform.localScale.y*1.1f, _buildPoint.position.z);
+        return new Vector3(_buildPoint.position.x, currentSegment.position.y  + currentSegment.localScale.y + _block.transform.localScale.y*1f, _buildPoint.position.z);
     }
 }
